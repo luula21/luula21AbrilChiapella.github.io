@@ -1,0 +1,364 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+    list-style: none;    
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    background-color: #000000;
+    width: 100%;
+    height: 7vh;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slide-track {
+    width: 100%;
+    height:auto;
+}
+
+.slide {
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    white-space: nowrap;
+}
+
+.logos-slide {
+    display: inline-block;
+    animation: 35s slide infinite linear;
+}
+
+.slide img {
+    height: 20px;
+    padding-left: 2rem;
+}
+
+@keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+nav {
+    width: 100%;
+    background-color: #000000;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul {
+    display: flex;
+    text-align: center;
+    justify-content: end;    
+}
+
+nav ul li {
+    padding: 0% 10% 0% 0%;
+}
+
+#btn-menu {
+    display: none;
+}
+
+.container-menu {
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    height: 100%;
+    top: 0;right: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#btn-menu:checked ~ .container-menu{
+    opacity: 1;
+    visibility: visible;
+}
+
+.cont-menu {
+    width: 100%;
+    max-width: 250px;
+    background: #191A20;
+    height: 100%;
+    position: relative;
+    transition: all 500ms ease;
+    transform: translateX(100%);
+}
+
+#btn-menu:checked ~ .container-menu .cont-menu{
+    transform: translateX(0%);
+}
+
+.cont-menu nav{
+    transform: translateY(15%);
+}
+
+#dentro-menu a {
+    display: block;
+    text-decoration: none;
+    padding: 40px;
+    color: #c7c7c7;
+    border-right: 5px solid transparent;
+    transition: all 400ms ease;
+}
+
+#dentro-menu a:hover{
+    border-right: 5px solid #c7c7c7;
+    background: #1f1f1f1f ;
+}
+
+.cont-menu label {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#section-principal {
+    background-color: #000000;
+    width: 100%;
+    height: 1000px;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#section-principal h1{
+    font-size: 48px;
+    padding-bottom: 10%;
+}
+
+#section-principal .boton {
+    display: flex;
+    justify-content: center;
+}
+
+#section-principal button {
+    background-color: hsla(0, 0%, 42%, 0.5);
+    border: solid 1px black;
+    width: 18vh;
+    height: 5vh;
+    cursor: pointer;
+    border-radius: 50px;
+    color: #ffffff;
+}
+
+.separador {
+    background-color: #000000;
+    width: 100%;
+    height: 10%;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vh;
+    padding-bottom: 10vh;
+}
+
+#section-1 {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center ;
+    background-color: rgb(0, 0, 0);
+}
+
+.container-principal {
+    background-color: #000000;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #ffffff;
+    flex-wrap: wrap;
+}
+
+.container-principal p {
+    width: 100%;
+    padding: 0vh 15vh 1vh 15vh;
+    display: flex;
+    justify-content: space-around;
+    font-size: 3vh;
+}
+
+.container-principal button {
+    background-color: hsla(0, 0%, 42%);
+    width: 7rem;
+    border: 1px;
+}
+
+.hoodies {
+    background-image: url(../fotos/fondo-hoodie.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #ffffff;
+    padding: 25vh 0vh;
+    text-align: center;
+}
+
+.remeras {
+    background-image: url(../fotos/fondo-remeras.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #ffffff;
+    padding: 25vh 0vh;
+    margin: 5rem;
+    text-align: center;
+}
+
+.pantalones {
+    background-image: url(../fotos/fondo-pantalones.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #ffffff;
+    padding: 25vh 0vh;
+    text-align: center;
+}
+
+.btn-compra button {
+    width: 10vh;
+    height: 4vh;
+    cursor: pointer;
+}
+
+#section-2 {
+    background-color: #000000;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    color: #ffffff;
+}
+
+.container-informacion {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 2vh;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.container-informacion img {
+    width: 4vh;
+    padding-top: 4vh;
+    padding-bottom: 2vh;
+}
+
+.cuadro-2 {
+    width: 44vh;
+    height: 30vh;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cuadro-3 {
+    font-size: 17px;
+}
+
+.cuadro-1 #fondo-gris {
+    background-color: #25262D;
+    border-radius: 60px;
+    width: 35vh;
+    height: 20vh;
+}
+
+.cuadro-2 #fondo-gris {
+    background-color: #25262D;
+    border-radius: 60px;
+    width: 87%;
+    height: 20vh;
+}
+
+.cuadro-3 #fondo-gris {
+    background-color: #25262D;
+    border-radius: 60px;
+    width: 35vh;
+    height: 20vh;
+}
+
+#section-3 {
+    background-color: #000000;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    padding: 10%;
+}
+
+.container-contacto {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container-contacto span {
+    background-color: #25262D;
+    padding: 4vh 6vh 3vh 6vh;
+    border-radius: 120px;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+}
+
+footer .pie {
+    background-color: #ffffff;
+    width: 90%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+}   
+
+footer h2 {
+    padding: 1vh;
+}
+
+footer p {
+    padding-top: 1.5vh;
+}
+
+.pie span p {
+    display: inline-block;
+}
+
+@media (max-width:600px) {
+   .container-contacto span{
+        margin-top: 10px;
+   }
+   .cuadro-1 #fondo-gris{
+        margin-top: 50px;
+   }
+
+   .cuadro-3 #fondo-gris {
+        margin-top: 100px;
+   }
+}
